@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Daniel's Portfolio</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="prism-atom-dark.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <script type="text/javascript" src="prism.js"></script>
+    <script type="text/javascript" src="prism.ruby.js"></script>
+    <meta name="description" content="Daniel Llinas is a professional
+        software engineer specializing in full-stack development.
+        He has extensive experience with Ruby, Rails, JavaScript,
+        and building web applications.">
+  </head>
+  <body>
+    <div class="about-container">
+
+      <ul>
+        <li><a class="nav-link" href="#">About</a></li>
+        <li><a class="nav-link" href="#code-samples">Code Samples</a></li>
+        <li><a class="nav-link" href="#web-apps">Web Apps</a></li>
+        <li><a class="nav-link" href="#skills-and-tools">Skills &amp; Tools</a></li>
+        <li class="hire-me"><a class="nav-link" href="#hire-me">Hire Me</a></li>
+      </ul>
+
+      <div class="about">
+        <img src="me.jpg" class="me" />
+        <h1>Daniel Llinas</h1>
+        <h2>SOFTWARE ENGINEER </h2>
+        <hr class='gray' />
+        <p class='bio'>
+          Daniel Llinas is currently Chief Operating Officer at WishYoo. His journey in tech work started wtih a coding bootcamp, and after working as a Ruby on Rails developer for several months, he moved into a management role at his curent startup. He hasn't lost his passion for coding, however, and he continues to build, code, and learn new technologies every single day.
+        </p>
+      </div>
+    </div>
+
+    <h3 id="code-samples">Code Snippets</h3>
+
+    <hr class="yellow">
+
+    <div class="box">
+      <h4>Temperature Conversion</h4>
+
+      <p class="">
+        This ruby program will prompt a user for a temperature in degree Celsius and let the user know what the corresponding temperature is in Fahrenheit.
+      </p>
+    </div>
+
+    <div class="box">
+<pre><code class="language-ruby">puts &quot;Enter degrees in Celsius:&quot;
+celsius = gets.chomp!
+farenheit = (celsius.to_f * 9) / 5 + 32
+puts &quot;The temperature in Farenheit is #{farenheit} degrees.&quot;</code></pre>
+
+    </div>
+
+    <br class="clear">
+
+    <div class="box">
+<pre><code class="language-ruby">puts &quot;Enter a number:&quot;
+number = gets.to_i
+
+if number &gt; 9 &amp;&amp; number &lt; 20
+  suffix = &quot;th&quot;
+elsif number % 10 == 1
+  suffix = &quot;st&quot;
+elsif number % 10 == 2
+  suffix = &quot;nd&quot;
+elsif number % 10 == 3
+  suffix = &quot;rd&quot;
+else
+  suffix = &quot;th&quot;
+end
+
+puts &quot;You entered #{number}, which makes the ordinal: #{number.to_s + suffix}&quot;</code></pre>
+    </div>
+
+    <div class="box">
+      <h4>Ordinal Challenge</h4>
+
+      <p class="">
+        This ruby program will convert a plain number to the ordinal of the number. So for example, if the user enters 2, it will display 2nd, if the user enters 3, it will display 3rd, etc.
+      </p>
+    </div>
+
+    <br class="clear">
+
+    <div class="box">
+      <h4>Foobar</h4>
+
+      <p class="">
+        This ruby program is an adaptation of a classic technical interview problem which displays sequences of the Foobar pattern.
+      </p>
+    </div>
+
+    <div class="box">
+<pre><code class="language-ruby">def foobar(n)
+  x = 1
+  while x &lt;= n
+    if x % 3 == 0 &amp;&amp; x % 5 == 0
+      puts &quot;foobar&quot;
+    elsif x % 5 == 0
+      puts &quot;bar&quot;
+    elsif x % 3 == 0
+      puts &quot;foo&quot;
+    else
+      puts x
+    end
+    x += 1
+  end
+end
+
+puts &quot;How many digits do you want to see?&quot;
+
+digits = gets.to_i
+
+foobar(digits)</code></pre>
+    </div>
+
+    <br class="clear">
+
+    <h3 id="web-apps">Web Apps</h3>
+
+    <hr class="yellow">
+
+    <div class="box">
+      <h4>Quote Generator</h4>
+      <img src="splurty.png" alt="" class="full-width">
+
+      <p>
+        A database-powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and GitHub for version control, and launched on Heroku.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Yelp Clone</h4>
+      <img src="nomster.png" class="full-width" />
+      <p>
+        A Yelp clone that integrates with the Google Maps API
+        and includes features like user comments, star ratings,
+        image uploading, and user authentication.
+      </p>
+    </div>
+    <br class="clear" />
+
+    <div class="box">
+      <h4>Two-Sided Market Place</h4>
+      <img src="flixter.png" class="full-width" />
+      <p>
+        A two-sided, video-streaming marketplace platform that
+        features credit card payment capabilities, user role
+        management, complex user interfaces, and advanced
+        database relationships.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Test Driven Development</h4>
+      <img src="grammable.png" class="full-width" />
+      <p>
+        An Instagram clone that was built using industry-standard, test-driven
+        development following numerous red/green/refactor cycles.
+      </p>
+    </div>
+    <br class="clear" />
+    <div class="box">
+      <h4>Single Page Todo Application</h4>
+      <img src="todoster.png" class="full-width" />
+      <p>
+        This single-page to-do application features a
+        fluid user interface that– by using JavaScript–
+        allows users to rapidly add dynamic content.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Agile Team Project</h4>
+      <img src="chess.png" class="full-width" />
+      <p>
+        Worked on an Agile software development team building
+        a chess application. Under the guidance of a senior software engineer,
+        we had weekly Agile team meetings for code reviews, sprint planning,
+        and feature assignments.
+      </p>
+    </div>
+    <br class="clear" />
+    <h3 id="skills-and-tools">Skills &amp; Tools</h3>
+    <hr class="yellow">
+    <p class="skills-and-tools">
+      Daniel has developed proficiency and expertise in the following programming languages and comfort with the following tools.
+    </p>
+    <div class="icons">
+      <img src="github.png" alt="" class="icon">
+      <img src="rubocop.png" alt="" class="icon">
+      <img src="trello.png" alt="" class="icon">
+      <img src="slack.png" alt="" class="icon">
+      <img src="codeship.png" alt="" class="icon">
+
+      <br class="clear">
+
+      <img src="skills.png" alt="" class="icon">
+    </div>
+    <br class="clear">
+    <div class="contact-me" id="hire-me">
+      <h3 class="contact-headline">Contact</h3>
+      <hr class="yellow">
+
+      <p class="contact-info">
+        Currently entertaining new opportunities.
+        Please get in touch via email:
+      </p>
+
+      <p>
+        <a class="contact-link" href="mailto:danllinas@gmail.com">danllinas@gmail.com</a>
+      </p>
+    </div>
+  </body>
+</html>
